@@ -1,0 +1,19 @@
+# VARDI Partner-Gateway — Deploy-to-Cloudflare-Fassung.
+# Gespiegelt nach https://github.com/Vardiflowers-UG/vardiflowers-partner
+# (scripts/partner-gateway-repo-sync.mjs) — dort NICHT von Hand aendern.
+#
+# Der Knopf legt den KV-Speicher selbst an und verbindet ihn (deshalb keine id).
+# Danach im Cloudflare-Dashboard unter Workers → vardiflowers-partner →
+# Einstellungen → Domains & Routen die eigene Domain eintragen und sie einmal
+# aufrufen: das Gateway meldet sich selbst bei VARDI an.
+
+name = "vardiflowers-partner"
+main = "worker.js"
+compatibility_date = "2024-09-09"
+workers_dev = false
+
+[vars]
+WEG = "deploy_knopf"            # wie installiert — nur fuer VARDIs Statistik
+
+[[kv_namespaces]]
+binding = "GATEWAY_KV"

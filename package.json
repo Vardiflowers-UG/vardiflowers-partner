@@ -1,0 +1,12 @@
+{
+  "name": "vardiflowers-partner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VARDI Partner-Gateway: die VARDI-Partnerseite unter der eigenen Domain (Cloudflare Worker).",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}
